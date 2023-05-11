@@ -34,3 +34,21 @@ h3 {
     justify-content: center;
     color: limegreen;
 }
+
+h3>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: limegreen;
+    text-decoration: none;
+    border: 1px solid black;
+    box-shadow: 0.1rem 0.1rem 0.4rem black;
+    width: 8rem;
+    height: 2rem;
+}
+
+h3>a:hover {
+    background-color: black;
+        border: 1px solid limegreen;
+    box-shadow: 0.1rem 0.1rem 0.4rem limegreen;
+}
