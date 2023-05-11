@@ -14,7 +14,7 @@
     <h3>Aantal sterren: <?= $data['sterren']; ?></h3>
     <h3><?= $data['nothing']; ?></h3>
     <h3>
-        <a href="<?= URLROOT; ?>/InstructeurAdd/index">Toevoegen voertuig</a>
+        <a href="<?= URLROOT; ?>/intructeuradd/index">Toevoegen voertuig</a>
     </h3>
     <table>
         <thead>
