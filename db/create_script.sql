@@ -3,7 +3,7 @@
 -- =============================================================================
 --  Version       Date:           Author:                     Description: 
 -- =============================================================================
---  01            04-04-2023      Vincent van de Merwe            new          
+--  01            11-05-2023      Vincent van de Merwe            new          
 -- =============================================================================
 drop database if exists `Mvc-2209b-P4-opdracht-2`;
 create database if not exists `Mvc-2209b-P4-opdracht-2`;
@@ -14,7 +14,7 @@ use `Mvc-2209b-P4-opdracht-2`;
 -- =============================================================================
 --  Version       Date:           Author:                     Description: 
 -- =============================================================================
---  01            04-04-2023      Vincent van de Merwe            new          
+--  01            11-05-2023      Vincent van de Merwe            new          
 -- =============================================================================
 
 drop table if exists Instructeur;
@@ -38,7 +38,7 @@ CONSTRAINT primary key CLUSTERED(Id)
 -- =============================================================================
 --  Version       Date:           Author:                     Description: 
 -- =============================================================================
---  01            04-04-2023      Vincent van de Merwe            new          
+--  01            11-05-2023      Vincent van de Merwe            new          
 -- =============================================================================
 
 drop table if exists TypeVoertuig;
@@ -58,7 +58,7 @@ CONSTRAINT      PK_TypeVoertuig_Id   PRIMARY KEY CLUSTERED(Id)
 -- =============================================================================
 --  Version       Date:           Author:                     Description: 
 -- =============================================================================
---  01            04-04-2023      Vincent van de Merwe            new          
+--  01            11-05-2023      Vincent van de Merwe            new          
 -- =============================================================================
 
 drop table if exists Voertuig;
@@ -82,7 +82,7 @@ foreign key (TypeVoertuigId) references TypeVoertuig(Id)
 -- =============================================================================
 --  Version       Date:           Author:                     Description: 
 -- =============================================================================
---  01            04-04-2023      Vincent van de Merwe            new          
+--  01            11-05-2023      Vincent van de Merwe            new          
 -- =============================================================================
 
 drop table if exists VoertuigInstructeur;
@@ -105,7 +105,7 @@ foreign key (InstructeurId) references Instructeur(Id)
 -- =============================================================================
 --  Version       Date:           Author:                     Description: 
 -- =============================================================================
---  01            04-04-2023      Vincent van de Merwe            new          
+--  01            11-05-2023      Vincent van de Merwe            new          
 -- =============================================================================
 
 INSERT INTO Instructeur (Id,Voornaam,Tussenvoegsel,Achternaam,Mobiel,DatumInDienst,AantalSterren,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
@@ -124,7 +124,7 @@ VALUES (null, 'Mohammed', 'El', 'Yassidi', '06-34291234', '14-06-2010', '*****',
 -- =============================================================================
 --  Version       Date:           Author:                     Description: 
 -- =============================================================================
---  01            04-04-2023      Vincent van de Merwe            new          
+--  01            11-05-2023      Vincent van de Merwe            new          
 -- =============================================================================
 
 INSERT INTO TypeVoertuig (Id,TypeVoertuig,Rijbewijscategorie,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
@@ -141,7 +141,7 @@ VALUES (null, 'Bromfiets', 'AM', 1, NULL, SYSDATE(6), SYSDATE(6));
 -- =============================================================================
 --  Version       Date:           Author:                     Description: 
 -- =============================================================================
---  01            04-04-2023      Vincent van de Merwe            new          
+--  01            11-05-2023      Vincent van de Merwe            new          
 -- =============================================================================
 
 INSERT INTO Voertuig (Id,Kenteken,Type,Bouwjaar,Brandstof,TypeVoertuigId,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd) 
@@ -174,7 +174,7 @@ VALUES (null, '45-SD-23', 'Renault', '01-01-2023', 'Diesel', 3, 1, NULL, SYSDATE
 -- =============================================================================
 --  Version       Date:           Author:                     Description: 
 -- =============================================================================
---  01            04-04-2023      Vincent van de Merwe            new          
+--  01            11-05-2023      Vincent van de Merwe            new          
 -- =============================================================================
 
 INSERT INTO VoertuigInstructeur (Id,VoertuigId,InstructeurId,DatumToekenning,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd)
