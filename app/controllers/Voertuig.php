@@ -56,6 +56,5 @@ class Voertuig extends BaseController
         ];
 
         $this->view('voertuig/index', $data);
-        $this->view('voertuig/add', $data);
     }
 }
