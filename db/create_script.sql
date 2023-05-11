@@ -5,9 +5,9 @@
 -- =============================================================================
 --  01            04-04-2023      Vincent van de Merwe            new          
 -- =============================================================================
-drop database if exists `Mvc-2209b-P4`;
-create database if not exists `Mvc-2209b-P4`;
-use `Mvc-2209b-P4`; 
+drop database if exists `Mvc-2209b-P4-opdracht-2`;
+create database if not exists `Mvc-2209b-P4-opdracht-2`;
+use `Mvc-2209b-P4-opdracht-2`; 
 
 -- Step: 02
 -- Goal: create table Instructeur
