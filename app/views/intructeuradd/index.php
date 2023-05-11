@@ -15,6 +15,7 @@
     <h3><?= $data['nothing']; ?></h3>
     <table>
         <thead>
+        <?= $data['table']; ?>
         </thead>
         <tbody>
             <?= $data['rows'];  ?>

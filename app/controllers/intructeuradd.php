@@ -21,7 +21,7 @@ class intructeuradd extends BaseController
         $head = '';
         if ($result == null) {
             $table = "Er zijn op dit moment nog geen voertuigen toegewezen aan deze instructeur";
-                // header('Refresh:3;url=/instructeur/index');
+                header('Refresh:3;url=/instructeur/index');
         } else {
             foreach ($result as $Voertuigen) {
                 $head = "<th>Type voertuig</th>
@@ -42,7 +42,7 @@ class intructeuradd extends BaseController
         }
 
         $data = [
-            'title' => 'Door instructeur gebruikte voertuigen',
+            'title' => 'Alle beschikbare voertuigen',
             'records' => 'info uit de database',
             'nothing' => $table,
             'id' => $Id,
