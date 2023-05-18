@@ -29,7 +29,8 @@ class intructeuradd extends BaseController
                 <th>Kenteken</th>
                 <th>Bouwjaar</th>
                 <th>Brandstof</th>
-                <th>Rijbewijscategorie</th>";
+                <th>Rijbewijscategorie</th>
+                <th>Toevoegen</th>";
                 $rows .= "<tr>
                 <td>$Voertuigen->TypeVoertuig</td>
                 <td>$Voertuigen->Type</td>
@@ -37,6 +38,11 @@ class intructeuradd extends BaseController
                 <td>$Voertuigen->Bouwjaar</td>
                 <td>$Voertuigen->Brandstof</td>
                 <td>$Voertuigen->Rijbewijscategorie</td>
+                <td>
+                <a href='" . URLROOT . "/voertuig/index/" . $Id . "'>
+                <img src='". URLROOT . "/img/add.png' alt='add.png'>
+                </a>
+                </td>
                 </tr>";
             }
         }
