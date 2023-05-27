@@ -51,6 +51,30 @@ class InstructeurModel
         return $this->db->resultSet();
     }
 
+    public function getbeschikbarevoertuigen()
+    {
+        $sql = "SELECT
+            voer.Type
+            ,voer.Kenteken
+            ,voer.Bouwjaar
+            ,voer.Brandstof
+            ,typevoer.TypeVoertuig
+            ,typevoer.Rijbewijscategorie
+            ,voer.Id
+            from Voertuig as voer
+
+            left join VoertuigInstructeur as voerinstruc
+            on voer.Id = voerinstruc.voertuigId
+            
+            inner join TypeVoertuig as typevoer
+            on voer.TypeVoertuigId = typevoer.Id
+            
+            where voerinstruc.voertuigId is NUll";
+
+        $this->db->query($sql);
+        return $this->db->resultSet();
+    }
+
     public function getInstructeurById($Id)
     {
         $sql = "SELECT * FROM Instructeur WHERE Id = $Id";

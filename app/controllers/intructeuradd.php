@@ -15,7 +15,7 @@ class intructeuradd extends BaseController
         $instructeur = $this->intructeuraddinfo->getInstructeurById($Id);
         // var_dump($instructeur);
 
-        $result = $this->intructeuraddinfo->getVoertuigen($Id);
+        $result = $this->intructeuraddinfo->getbeschikbarevoertuigen($Id);
         $rows = '';
         $table = '';
         $head = '';
