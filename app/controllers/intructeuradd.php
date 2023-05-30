@@ -16,11 +16,12 @@ class intructeuradd extends BaseController
         // var_dump($instructeur);
 
         $result = $this->intructeuraddinfo->getbeschikbarevoertuigen($Id);
+        //  var_dump($result);exit();
         $rows = '';
         $table = '';
         $head = '';
         if ($result == null) {
-            $table = "Er zijn op dit moment nog geen voertuigen toegewezen aan deze instructeur";
+            $table = "Er zijn geen voertuigen meer om toe te voegen";
                 header('Refresh:3;url=/instructeur/index');
         } else {
             foreach ($result as $Voertuigen) {
@@ -39,7 +40,7 @@ class intructeuradd extends BaseController
                 <td>$Voertuigen->Brandstof</td>
                 <td>$Voertuigen->Rijbewijscategorie</td>
                 <td>
-                <a href='" . URLROOT . "/voertuig/index/" . $Id . "'>
+                <a href='" . URLROOT . "/intructeuradd/addVehicle/" . $Id . "/" . $Voertuigen->Id . "'>
                 <img src='". URLROOT . "/img/add.png' alt='add.png'>
                 </a>
                 </td>
@@ -62,5 +63,14 @@ class intructeuradd extends BaseController
         ];
 
         $this->view('intructeuradd/index', $data);
+    }
+
+    public function addVehicle($instructeurId, $vehicleId)
+    {
+        // echo $instructeurId . " | " . $vehicleId;
+        // exit();
+        $result = $this->intructeuraddinfo->addVehicleToInstructeur($vehicleId, $instructeurId);
+
+        header('location: ' . URLROOT . '/instructeur/index');
     }
 }

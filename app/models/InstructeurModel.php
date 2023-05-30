@@ -81,6 +81,14 @@ class InstructeurModel
 
         $this->db->query($sql);
         return $this->db->resultSet();
+    }
 
+    public function addVehicleToInstructeur($voertuigId, $instructeurId)
+    {
+        $sql =  "INSERT INTO VoertuigInstructeur (VoertuigId,InstructeurId,DatumToekenning,IsActief,Opmerkingen,DatumAangemaakt,DatumGewijzigd)
+        VALUES ($voertuigId, $instructeurId, SYSDATE(3), 1, NULL, SYSDATE(6), SYSDATE(6));";
+
+        $this->db->query($sql);
+        return $this->db->resultSet();
     }
 }
